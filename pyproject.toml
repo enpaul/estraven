@@ -1,18 +1,18 @@
 [tool.poetry]
-name = "genly"
+name = "estraven"
 version = "0.0.0"
 license = "MIT"
 authors = ["Ethan Paul <24588726+enpaul@users.noreply.github.com>"]
 description = "An opinionated YAML formatter for Ansible playbooks"
-repository = "https://github.com/enpaul/genly/"
+repository = "https://github.com/enpaul/estraven/"
 packages = [
-  {include = "genly"},
+  {include = "estraven"},
   {include = "tests/*.py", format = "sdist"}
 ]
 include = [
   "genly/py.typed"
 ]
-keywords = ["ansible", "yaml", "automation", "formatter"]
+keywords = ["ansible", "yaml", "automation", "formatter", "pre-commit"]
 readme = "README.md"
 classifiers = [
   "Development Status :: 2 - Pre-Alpha",
@@ -25,15 +25,15 @@ classifiers = [
   "Natural Language :: English",
   "Operating System :: OS Independent",
   "Programming Language :: Python :: 3",
-  "Programming Language :: Python :: 3.6",
   "Programming Language :: Python :: 3.7",
   "Programming Language :: Python :: 3.8",
   "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: Implementation :: CPython"
 ]
 
 [tool.poetry.dependencies]
-python = "^3.6.1"
+python = "^3.7.0"
 
 [tool.poetry.dev-dependencies]
 bandit = "^1.6.2"
@@ -41,6 +41,7 @@ black = { version = "^21.9b0", allow-prereleases = true, python = "^3.7" }
 blacken-docs = "^1.8.0"
 ipython = { version = "^7.18.1", python = "^3.7" }
 mypy = "^0.800"
+poetry = "^1.1.0"
 pre-commit = "^2.7.1"
 pre-commit-hooks = "^3.3.0"
 pylint = "^2.4.4"
@@ -50,7 +51,7 @@ reorder-python-imports = "^2.3.5"
 safety = "^1.9.0"
 toml = "^0.10.1"
 tox = "^3.20.0"
-tox-poetry-installer = { version = "^0.8.1", extras = ["poetry"] }
+tox-poetry-installer = { version = "^0.8.2", extras = ["poetry"] }
 mdformat = "^0.6.4"
 mdformat-gfm = "^0.2"
 

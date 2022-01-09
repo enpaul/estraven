@@ -7,7 +7,7 @@ from pathlib import Path
 
 import toml
 
-from genly import __about__
+from estraven import __about__
 
 
 def test_metadata():

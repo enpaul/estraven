@@ -1,4 +1,4 @@
-# genly makefile
+# estraven makefile
 
 .PHONY: help
 # Put it first so that "make" without argument is like "make help"

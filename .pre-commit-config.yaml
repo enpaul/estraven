@@ -1,17 +1,4 @@
 ---
-# All of the pre-commit hooks here actually use the `pytyhon` pre-commit language
-# setting. However, for the python language setting, pre-commit will create and manage
-# a cached virtual environment for each hook ID and do a bare `pip install <repo>` into
-# the venv to setup the hook. This can result in conflicting dependency versions between
-# the version installed to the pre-commit venv and the version installed to the Poetry
-# venv specified in the lockfile.
-#
-# The solution is to specify `language: system` for all hooks and then install the
-# required dependencies to the Poetry venv. The `system` language skips the isolated
-# venv creation and looks for the entrypoint specified by the hook in the global
-# environment which, if running in the Poetry venv, will find the entrypoint provided
-# by the Poetry-managed dependency.
-#
 repos:
   - repo: local
     hooks:
